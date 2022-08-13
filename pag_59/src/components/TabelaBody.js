@@ -8,7 +8,14 @@ export const TabelaBody = (props) => {
             <td>{livro.titulo}</td>
             <td>{livro.autor}</td>
             <td>
-              <button className="btnRemove">Remover</button>
+              <button
+                className="btnRemove"
+                onClick={() => {
+                  props.handleClick(livro.id)
+                }}
+              >
+                Remover
+              </button>
             </td>
           </tr>
         )
