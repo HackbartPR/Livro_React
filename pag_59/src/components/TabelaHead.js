@@ -1,3 +1,6 @@
+//CONPONENTES
+import { SortTable } from './SortTable'
+
 export const TabelaHead = (props) => {
   return (
     <thead>
@@ -8,45 +11,11 @@ export const TabelaHead = (props) => {
         <th>ISBN</th>
         <th>
           Título
-          <div className="container-setinhas">
-            <div
-              className="up"
-              onClick={() => {
-                props.livrosUp()
-              }}
-            >
-              &#129093;
-            </div>
-            <div
-              className="down"
-              onClick={() => {
-                props.livrosDown()
-              }}
-            >
-              &#129095;
-            </div>
-          </div>
+          <SortTable up={props.livrosUp} down={props.livrosDown} />
         </th>
         <th>
           Autor
-          <div className="container-setinhas">
-            <div
-              className="up"
-              onClick={() => {
-                props.autorUp()
-              }}
-            >
-              &#129093;
-            </div>
-            <div
-              className="down"
-              onClick={() => {
-                props.autorDown()
-              }}
-            >
-              &#129095;
-            </div>
-          </div>
+          <SortTable up={props.autorUp} down={props.autorDown} />
         </th>
         <th></th>
       </tr>
