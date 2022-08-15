@@ -22,6 +22,7 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 
     list-style: none;
 
