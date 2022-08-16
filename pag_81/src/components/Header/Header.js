@@ -2,26 +2,32 @@
 import * as C from './style'
 //IMAGEM
 import logo from '../../assets/imagens/logo.png'
+//BIBLIOTECA
+import {NavLink} from 'react-router-dom'
+
+let linkCorrente = {
+  color: "#027399"
+}
 
 export const Header = () => {
   return (
     <C.Header>
-      <img src={logo} />
+      <img src={logo} alt="Logo da Empresa"/>
       <ul>
         <li>
-          <a href="#">HOME</a>
+          <NavLink  activestyle={linkCorrente} to ="/">HOME</NavLink>
         </li>
         <li>
-          <a href="#">FRONTEND</a>
+          <NavLink  activestyle={linkCorrente} to ="/frontend">FRONTEND</NavLink>
         </li>
         <li>
-          <a href="#">PROGRAMAÇÃO</a>
+          <NavLink  activestyle={linkCorrente} to ="/programacao">PROGRAMACAO</NavLink>
         </li>
         <li>
-          <a href="#">DESIGN</a>
+          <NavLink  activestyle={linkCorrente} to ="/design">DESIGN</NavLink>
         </li>
         <li>
-          <a href="#">CATÁLOGO</a>
+          <NavLink  activestyle={linkCorrente} to ="/catalogo">CATALOGO</NavLink>
         </li>
       </ul>
     </C.Header>
