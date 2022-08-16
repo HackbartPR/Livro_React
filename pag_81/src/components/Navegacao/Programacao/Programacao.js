@@ -1,7 +1,7 @@
 //ESTILIZAÇÃO
 import * as C from './style'
 //IMAGENS
-import image_1 from '../../assets/imagens/capas/9788575221662.jpg'
+import image_1 from '../../../assets/imagens/capas/9788575221662.jpg'
 
 export const Programacao = ()=>{
     return(

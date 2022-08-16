@@ -1,7 +1,7 @@
 //ESTILIZAÇÃO
 import * as C from './style'
 //IMAGENS
-import image_1 from '../../assets/imagens/capas/9788575221396.jpg'
+import image_1 from '../../../assets/imagens/capas/9788575221396.jpg'
 
 export const Home = () => {
   return (
