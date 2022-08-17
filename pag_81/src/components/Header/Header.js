@@ -1,7 +1,5 @@
 //ESTILIZAÇÃO
 import * as C from './style'
-//IMAGEM
-import logo from '../../assets/imagens/logo.png'
 //BIBLIOTECA
 import {Link} from 'react-router-dom'
 
@@ -9,7 +7,7 @@ export const Header = () => {
   return (
     <C.Header>
       <Link to="/">
-        <img src={logo} alt="Logo da Empresa" />
+        <img src={"/assets/imagens/logo.png"} alt="Logo da Empresa" />
       </Link>
       <ul>
         <li>

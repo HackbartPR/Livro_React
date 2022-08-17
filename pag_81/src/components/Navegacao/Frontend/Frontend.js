@@ -4,7 +4,7 @@ import * as C from './style'
 import {Card} from '../Card/Card'
 
 
-export const Programacao = (props)=>{
+export const Fronted = (props)=>{
 
     const construirCard = (livro)=>{
         return(
@@ -13,13 +13,13 @@ export const Programacao = (props)=>{
     }
 
     return(
-        <C.Programacao>
+        <C.Frontend>
             <div className="wrapper">
                 <h2 className="title">Últimos Lançamentos</h2>
                 <div className="card">
                     {props.livros.map(construirCard)}
                 </div>
             </div>
-        </C.Programacao>
+        </C.Frontend>
     )
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Programacao = styled.main`
+export const Design = styled.main`
   min-width: 375px;
   max-width: 100%;
 
