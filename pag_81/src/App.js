@@ -1,7 +1,6 @@
 //COMPONENTES
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer.js";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //NAVEGAÇÃO
 import { Home } from "./components/Navegacao/Home/Home";
 import { Programacao } from "./components/Navegacao/Programacao/Programacao";
@@ -14,6 +13,7 @@ import { Livro } from "./components/Livro/Livro";
 import { recebeLivros } from "./services/Api";
 //BIBLIOTECAS
 import { Component } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 class App extends Component {
   state = {
@@ -24,6 +24,7 @@ class App extends Component {
     const livros = await recebeLivros();
     !(livros instanceof Error) && this.setState({ livros });
   }
+
 
   render() {
     if (this.state.livros.length == 0) return <p>Aguardando...</p>;
@@ -38,6 +39,7 @@ class App extends Component {
           <Route path="/frontend" element={<Fronted livros={this.state.livros} />} />
           <Route path="/design" element={<Design livros={this.state.livros} />} />
           <Route path="/catalogo" element={<Catalogo livros={this.state.livros} />} />
+          <Route path="/livro/:id" element={<Livro id={this.props.match.params.id}/>} />
           <Route element={<NotFound />} />
         </Routes>
         <Footer />

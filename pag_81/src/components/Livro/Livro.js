@@ -1,6 +1,7 @@
 import * as C from "./style";
 
-export const Livro = () => {
+export const Livro = (props) => {
+  console.log(props.id)
   return (
     <C.Catalogo>
       <div className="wrapper">
